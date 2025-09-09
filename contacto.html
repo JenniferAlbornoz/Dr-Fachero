@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Dr. Fachero</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Carga el JS externo (asegúrate de tener /js/script.js) -->
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <!-- Pop-up de mensajes (toast arriba) -->
+  <div id="toast" aria-live="assertive" aria-atomic="true" role="alert"></div>
+
+  <!-- Modal de mensajes (diálogo centrado) -->
+  <div id="appModal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog" role="document" aria-labelledby="modalTitle">
+      <h3 id="modalTitle">Mensaje</h3>
+      <p id="modalMsg"></p>
+      <button id="modalOk" class="btn btn-primary" type="button">Aceptar</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="menu container">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo_drfachero.png" alt="Logo Dr. Fachero" />
+      </a>
+      <input type="checkbox" id="menu" />
+      <label for="menu" class="menu-toggle">
+        <img src="imagenes/menu-pequeño.png" alt="Menu-icono" />
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="funcionalidades.html">Funcionalidades</a></li>
+          <li><a href="planes.html">Planes</a></li>
+          <li><a href="porque.html">¿Por qué Dr. Fachero?</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h1>Moderniza tu clínica y gana eficiencia</h1>
+            <p>
+              Descubre cómo digitalizar procesos en tu clínica o centro de salud para ahorrar tiempo y recursos valiosos, permitiéndote enfocarte en la atención al paciente.
+            </p>
+            <h3>Soluciones para múltiples áreas:</h3>
+            <div class="contact-features-grid">
+              <div class="contact-feature-item"><span class="icon">📄</span> Expediente electrónico</div>
+              <div class="contact-feature-item"><span class="icon">🗓️</span> Agenda pacientes</div>
+              <div class="contact-feature-item"><span class="icon">💰</span> Recaudación y cobranza</div>
+              <div class="contact-feature-item"><span class="icon">📦</span> Inventario y bodega</div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h2>Obtén más información</h2>
+            <form id="contactForm" novalidate autocomplete="off">
+              <div class="contact-form-group">
+                <div>
+                  <label for="nombre">Nombre*</label>
+                  <input type="text" id="nombre" name="nombre" />
+                </div>
+                <div>
+                  <label for="apellido">Apellido*</label>
+                  <input type="text" id="apellido" name="apellido" />
+                </div>
+              </div>
+
+              <div class="contact-form-group">
+                <div>
+                  <label for="nombre_clinica">Nombre de clínica*</label>
+                  <input type="text" id="nombre_clinica" name="nombre_clinica" />
+                </div>
+                <div>
+                  <label for="num_profesionales">Nº de profesionales*</label>
+                  <input type="number" id="num_profesionales" name="num_profesionales" />
+                </div>
+              </div>
+
+              <div class="contact-form-group">
+                <div>
+                  <label for="correo">Correo laboral*</label>
+                  <input type="text" id="correo" name="correo" />
+                </div>
+                <div>
+                  <label for="telefono">Número de teléfono*</label>
+                  <div class="phone-input-group">
+                    <select id="prefijo_pais" name="prefijo_pais">
+                      <option value="+56">Chile (+56)</option>
+                    </select>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 912345678" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="mensaje">¿Tienes preguntas?</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo">
+            <img src="imagenes/logo_drfachero.png" alt="Logo Dr. Fachero en negativo" />
+          </a>
+          <p>Modernizando la gestión de la salud, un paciente a la vez.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="funcionalidades.html">Funcionalidades</a></li>
+            <li><a href="planes.html">Planes</a></li>
+            <li><a href="porque.html">¿Por qué nosotros?</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dr. Fachero. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

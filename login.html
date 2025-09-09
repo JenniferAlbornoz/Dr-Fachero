@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión | Dr. Fachero</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="menu container">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo_drfachero.png" alt="Logo Dr. Fachero">
+      </a>
+      <input type="checkbox" id="menu">
+      <label for="menu" class="menu-toggle">
+        <img src="imagenes/menu-pequeño.png" alt="Menu-icono">
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="funcionalidades.html">Funcionalidades</a></li>
+          <li><a href="planes.html">Planes</a></li>
+          <li><a href="porque.html">¿Por qué Dr. Fachero?</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-main">
+    <div class="login-container">
+      <a href="index.html">
+        <img src="imagenes/logo_drfachero.png" alt="Logo Dr. Fachero">
+      </a>
+      <h1>Iniciar Sesión</h1>
+
+      <form id="loginForm" action="/procesar-login" method="POST">
+        <div class="input-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Tu contraseña">
+        </div>
+        <button type="submit" class="login-button">Ingresar</button>
+        <div class="login-links">
+          <a href="contrasena.html">¿Olvidaste tu contraseña?</a>
+          <span class="separator">|</span>
+          <a href="registro.html">Crear una cuenta nueva</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="index.html" class="logo">
+            <img src="imagenes/logo_drfachero.png" alt="Logo Dr. Fachero en negativo">
+          </a>
+          <p>Modernizando la gestión de la salud, un paciente a la vez.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="funcionalidades.html">Funcionalidades</a></li>
+            <li><a href="planes.html">Planes</a></li>
+            <li><a href="porque.html">¿Por qué nosotros?</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dr. Fachero. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pop-ups -->
+  <div id="toast" style="display:none"></div>
+  <div id="appModal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <div style="padding:18px 20px;border-bottom:1px solid #eee">
+        <h3 id="modalTitle">Mensaje</h3>
+      </div>
+      <div style="padding:18px 20px">
+        <p id="modalMsg"></p>
+      </div>
+      <div style="padding:14px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end">
+        <button id="modalOk" type="button" class="btn btn-primary">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
