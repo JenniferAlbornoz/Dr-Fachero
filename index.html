@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Soporta caracteres como ñ/acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
     <title>Inicio | Dr. Fachero</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
 <body>
+    <!-- Header con logo y navegación responsive (hamburguesa) -->
     <header class="header">
         <div class="menu container">
             <a href="index.html" class="logo">
                 <img src="imagenes/logo_drfachero.png" alt="Logo Dr. Fachero">
             </a>
-            
+            <!-- Toggle del menú en móviles -->
             <input type="checkbox" id="menu">
             <label for="menu" class="menu-toggle">
                 <img src="imagenes/menu-pequeño.png" alt="Menu-icono">
             </label>
+            <!-- Navegación principal; 'active' marca la página actual -->
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html" class="active">Inicio</a></li>
@@ -33,6 +35,7 @@
     </header>
 
     <main>
+        <!-- HERO: portada con mensaje principal -->
         <section class="hero container">
             <div class="hero-text">
                 <h1>La gestión de tu consulta, simple y moderna.</h1>
@@ -44,7 +47,7 @@
                 <img src="imagenes/draenmaorada3.png" alt="Ilustración de un profesional de la salud">
             </div>
         </section>
-
+        <!--layout partido -->
         <section class="section">
             <div class="container">
                 <div class="split-section">
@@ -61,7 +64,7 @@
                 </div>
             </div>
         </section>
-
+        <!--  beneficios + CTA a contacto -->
         <section class="section section-light">
             <div class="container">
                 <div class="split-section">
@@ -88,12 +91,12 @@
                         <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
                     </div>
                     <div class="split-section-image">
-                        <img src="imagenes/ficha3.png" alt="Software de Dr. Fachero en múltiples dispositivos">
+                        <img src="imagenes/ficha3.png" alt="Software de Dr. Fachero">
                     </div>
                 </div>
             </div>
         </section>
-
+        <!-- Planes: tarjetas Estándar (gratis) y Pro -->
         <section class="section section-light">
             <div class="container">
 
@@ -144,7 +147,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- Llamado a la acción visual con un GIF de fondo -->
         <section class="cta-section">
             <img src="imagenes/fiestas_real.gif" alt="Doctor Fachero celebrando Fiestas Patrias" class="cta-background-gif">
             <div class="cta-overlay"></div>
@@ -153,7 +156,7 @@
             </div>
         </section>
     </main>
-
+    <!-- Pie de página con navegación secundaria y redes -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

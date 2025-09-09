@@ -84,6 +84,7 @@ function notify(message, type = 'error', title = '') {
 /**********************
  * Validación Contacto 
  **********************/
+
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializa modal (si existe en el HTML)
   setupModal();
@@ -292,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  const passRe  = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/; // 8+ chars, al menos 1 letra y 1 número
+  const passRe  = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/; // 8+ caracteres y al menos 1 letra y 1 número
 
   /*********** LOGIN ***********/
   const loginForm = document.getElementById('loginForm');
